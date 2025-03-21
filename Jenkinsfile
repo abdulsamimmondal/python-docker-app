@@ -1,12 +1,12 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = 'yourdockerhub/python-app:latest'
+        DOCKER_IMAGE = 'samimmondal/python-app:latest'
     }
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/your-repo/python-docker-app.git'
+                git url:'https://github.com/abdulsamimmondal/python-docker-app.git',branch:'main'
             }
         }
         stage('Build Docker Image') {
